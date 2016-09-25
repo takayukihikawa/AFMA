@@ -1,7 +1,7 @@
 #!ruby -Ke
 # coding: utf-8
 #
-#      AUTOSAR BSW and RTE TASK RELATIONAL YAML Generator
+#      Automatic parameter generation tool for A-RTE
 
 require "rexml/document"
 require "pp"
@@ -18,7 +18,7 @@ data =YAML.load_file(templateparameter.yaml)
 
 $hashforOsRteconf =
 {"Ecuc" =>
-  #OSに関するコンフィギュレーション情報
+  #OS configuraiton parameters
   {"Os" =>
     {"MainApp" =>
       {"DefinitionRef" => "OsAppMode"},
@@ -40,7 +40,7 @@ $hashforOsRteconf =
       }
     },
     
-    #RTEに関するコンフィギュレーション情報
+    #RTE configuraiton parameters
     
     "Rte" =>
     {"RteBswGeneral" =>
